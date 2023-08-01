@@ -50,7 +50,7 @@ const removeMap = () => {
   
 }
 
-// for nice screenshot in frontendMentor:) 
+// loading user IP with first open) 
 document.addEventListener("DOMContentLoaded", getData)
 button.addEventListener("click", getIP)
 button.addEventListener("click", () => {
