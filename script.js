@@ -8,6 +8,7 @@ const button = document.querySelector('button')
 
 
 let latitude, longitude,ip, map
+ip = 0;
 
 const getIP = () => {
     ip = inputIP.value
@@ -49,8 +50,8 @@ const removeMap = () => {
   
 }
 
-
-
+// for nice screenshot in frontendMentor:) 
+document.addEventListener("DOMContentLoaded", getData)
 button.addEventListener("click", getIP)
 button.addEventListener("click", () => {
     removeMap()
