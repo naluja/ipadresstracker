@@ -1,0 +1,135 @@
+:root {
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.app-body {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+.app-body .top {
+  background-image: url("/images/pattern-bg-mobile.png");
+  background-size: cover;
+  height: 40vh;
+}
+.app-body .top h1 {
+  color: white;
+  font-weight: 400;
+  padding: 30px 0;
+}
+.app-body .top .input {
+  position: relative;
+  width: 85%;
+  margin: auto;
+}
+.app-body .top .input input {
+  border-radius: 15px;
+  padding: 20.5px 10px;
+  width: 100%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+.app-body .top .input button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+  padding: 19.5px 30px;
+  border-top-right-radius: 15px;
+  border-end-end-radius: 15px;
+  border: none;
+  z-index: 0;
+  background-color: var(--veryDarkGray);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.app-body .top .input button:hover {
+  background-color: hsl(0, 1%, 35%);
+}
+.app-body .top .output {
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+  width: 85%;
+  border-radius: 15px;
+  border: 1px solid gray;
+  z-index: 5;
+}
+.app-body .top .output .output-box {
+  margin: 20px 0;
+}
+.app-body .top .output .output-box h2 {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--darkGray);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3px;
+}
+.app-body .top .output .output-box p {
+  color: var(--veryDarkGray);
+  font-weight: 500;
+}
+.app-body #map {
+  background-color: var(--darkGray);
+  height: 60vh;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .app-body .top {
+    background-image: url("/images/pattern-bg-desktop.png");
+  }
+  .app-body .top .input {
+    width: 50%;
+  }
+  .app-body .top .output {
+    display: flex;
+    top: 30%;
+  }
+  .app-body .top .output .output-box {
+    width: 25%;
+    padding: 20px 10px 60px 30px;
+    margin: 10px 0px;
+    position: relative;
+    text-align: left;
+  }
+  .app-body .top .output .output-box p {
+    font-size: 1.3rem;
+  }
+  .app-body .top .output .output-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 55%;
+    width: 1px;
+    background-color: var(--darkGray);
+  }
+  .app-body .top .output .output-box:last-child::after {
+    height: 0;
+    width: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .app-body .top .input {
+    width: 40%;
+  }
+}/*# sourceMappingURL=style.css.map */
